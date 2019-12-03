@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block result %}
+<div class="tile is-ancestor">
+        <div class="tile is-vertical is-12">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-primary">
+                <p class="subtitle has-text-centered">Existe un <strong class="has-text-white">{{ probability }}%</strong>
+                     de probabilidad de que el cliente responda a la oferta positivamente. Es decir, su respuesta seguramente será un</p>
+                <p class="title has-text-centered is-size-1">{{ label }}</p>
+              </article>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

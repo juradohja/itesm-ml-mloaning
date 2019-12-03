@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="App">
+        <nav class="navbar is-transparent is-primary" role="navigation">
+            <p class="navbar-item has-text-white has-text-weight-bold is-size-2">Machine Loaning</p>
+        </nav>
+        <section class="section">
+            <div class="container">
+                <h1 class="has-text-left subtitle">Somos un banco que busca ofrecer préstamos personales a clientes potenciales.
+                    Ingresa los siguientes datos de una persona para saber qué tan probable es que acepte una futura oferta, o presiona uno de los siguientes botones
+                    para autocompletar el formulario.</h1></div>
+        </section>
+        <div class="columns is-multiline">
+            <div class="column is-8">
+                {% include 'form.html' %}
+            </div>
+            <div class="column">
+                {% block result %}
+                {% endblock %}
+                <div class="tile is-ancestor">
+                        <div class="tile is-vertical is-12">
+                          <div class="tile">
+                            <div class="tile is-parent is-vertical">
+                              <article class="tile is-child notification is-light">
+                                <p class="subtitle">A01336656 | José Alberto Jurado Hernández</p>
+                                <p class="subtitle">A01745515 | Orlan Viloria Hernández</p>
+                                <p class="subtitle">A01651285 | Hilda Sheila Juárez Vanegas </p>
+                                <p class="subtitle">A01339414 | Gonzalo Gabino Garcia Rodriguez</p>
+                              </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="root"></div>
+{% endblock %}
+
+{% block autocomplete %}
+<script>
+    $('#datos1').click(function(){
+        $("input[name=GENDER][value=M]").prop('checked', true);
+        $("input[name=OCCUPATION][value=SENP]").prop('checked', true);
+        $("input[name=AGE_BKT][value=41-45]").prop('checked', true);
+        $("input[name=ACC_TYPE][value=SA]").prop('checked', true);
+        $("input[name=FLG_HAS_CC][value=1]").prop('checked', true);;
+        $("input[name=FLG_HAS_ANY_CHGS][value=1]").prop('checked', true);;
+        $("input[name=FLG_HAS_NOMINEE][value=1]").prop('checked', true);;
+        $("input[name=FLG_HAS_OLD_LOAN][value=1]").prop('checked', true);;
+        $("input[name=LEN_OF_RLTN_IN_YRS]").val("12");
+        $("input[name=NO_OF_L_CR_TXNS]").val("6");
+        $("input[name=AMT_ATM_DR]").val("15700");
+        $("input[name=AVG_AMT_PER_ATM_TXN]").val("12000");
+        $("input[name=BALANCE]").val("300500");
+        $("input[name=HOLDING_PERIOD]").val("3");
+    });
+
+    $('#datos2').click(function(){
+        $("input[name=GENDER][value=F]").prop('checked', true);
+        $("input[name=OCCUPATION][value=SAL]").prop('checked', true);
+        $("input[name=AGE_BKT][value=36-40]").prop('checked', true);
+        $("input[name=ACC_TYPE][value=CA]").prop('checked', true);
+        $("input[name=FLG_HAS_CC][value=0]").prop('checked', true);;
+        $("input[name=FLG_HAS_ANY_CHGS][value=1]").prop('checked', true);;
+        $("input[name=FLG_HAS_NOMINEE][value=1]").prop('checked', true);;
+        $("input[name=FLG_HAS_OLD_LOAN][value=0]").prop('checked', true);;
+        $("input[name=LEN_OF_RLTN_IN_YRS]").val("7");
+        $("input[name=NO_OF_L_CR_TXNS]").val("7");
+        $("input[name=AMT_ATM_DR]").val("16300");
+        $("input[name=AVG_AMT_PER_ATM_TXN]").val("16303");
+        $("input[name=BALANCE]").val("12900");
+        $("input[name=HOLDING_PERIOD]").val("12");
+    });
+</script>
+{% endblock %}

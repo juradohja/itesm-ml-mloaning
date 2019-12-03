@@ -1,0 +1,231 @@
+
+            <form action="/predict" method="POST">
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Género</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="GENDER" value="F"> Femenino</label>
+                                <label class="radio">
+                                    <input type="radio" name="GENDER" value="M"> Masculino</label>
+                                <label class="radio">
+                                    <input type="radio" name="GENDER" value="O"> Otro</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Balance Mensual Promedio</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" name="BALANCE" value="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Ocupación</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <label class="radio">
+                                    <input type="radio" name="OCCUPATION" value="PROF"> PROF</label>
+                                <label class="radio">
+                                    <input type="radio" name="OCCUPATION" value="SAL"> SAL</label>
+                                <label class="radio">
+                                    <input type="radio" name="OCCUPATION" value="SELF_EMP"> SELF_EMP</label>
+                                <label class="radio">
+                                    <input type="radio" name="OCCUPATION" value="SENP"> SENP</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label is-small">Rango de Edad</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="&lt;25"> Menor que 25</label>
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="26-30"> 26-30</label>
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="31-35"> 31-35</label>
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="36-40"> 36-40</label>
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="41-45"> 41-45</label>
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="46-50"> 46-50</label>
+                                    <label class="radio">
+                                        <input type="radio" name="AGE_BKT" value="&gt;50"> Mayor que 50</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Capacidad de ahorro (1-31)</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" name="HOLDING_PERIOD" value="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Tipo de cuenta</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="ACC_TYPE" value="SA"> Ahorros</label>
+                                <label class="radio">
+                                    <input type="radio" name="ACC_TYPE" value="CA"> Corriente</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Años de relación</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" name="LEN_OF_RLTN_IN_YRS" value="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Transacciones de Crédito</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" name="NO_OF_L_CR_TXNS" value="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">¿Tiene tarjeta de crédito?</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_CC" value="1"> Sí</label>
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_CC" value="0"> No</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Cantidad Retirada de Cajeros</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" name="AMT_ATM_DR" value="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">¿Tiene cargos bancarios?</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_ANY_CHGS" value="1"> Sí</label>
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_ANY_CHGS" value="0"> No</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">Retiro Promedio en Cajero</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" name="AVG_AMT_PER_ATM_TXN" value="">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">¿Tiene nómina?</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_NOMINEE" value="1"> Sí</label>
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_NOMINEE" value="0"> No</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label is-small">
+                        <label class="label">¿Tiene préstamos anteriores?</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_OLD_LOAN" value="1"> Sí</label>
+                                <label class="radio">
+                                    <input type="radio" name="FLG_HAS_OLD_LOAN" value="0"> No</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-label"></div>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button is-primary">Predecir</button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button id="datos1" type="button" class="button is-link">Datos 1</button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button id="datos2" type="button" class="button is-info">Datos 2</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
